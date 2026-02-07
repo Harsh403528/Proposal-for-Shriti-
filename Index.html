@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Forever Us – Shriti ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins}
+body{
+  background:linear-gradient(135deg,#ff758c,#ff7eb3);
+  color:#fff;
+  overflow-x:hidden;
+}
+
+/* LOCK */
+#lock{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  text-align:center;
+}
+.heart{
+  font-size:100px;
+  cursor:pointer;
+  animation:pulse 1.4s infinite;
+  filter:drop-shadow(0 0 20px rgba(255,255,255,.8));
+}
+@keyframes pulse{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.3)}
+  100%{transform:scale(1)}
+}
+
+/* SECTIONS */
+section{
+  min-height:100vh;
+  padding:50px 25px;
+  display:none;
+  animation:fade .9s ease;
+}
+.active{display:block}
+@keyframes fade{
+  from{opacity:0;transform:translateY(30px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* TITLES */
+h1{
+  font-family:Great Vibes;
+  font-size:55px;
+  text-align:center;
+  margin-bottom:25px;
+}
+
+/* BUTTON */
+button{
+  padding:12px 32px;
+  border:none;
+  background:#fff;
+  color:#ff4f7b;
+  border-radius:30px;
+  font-weight:bold;
+  cursor:pointer;
+  margin-top:25px;
+  box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* ROSES */
+.rose{
+  position:fixed;
+  top:-50px;
+  animation:fall 10s linear infinite;
+  font-size:24px;
+}
+@keyframes fall{
+  to{transform:translateY(110vh) rotate(360deg)}
+}
+
+/* CHAT */
+.chat{
+  max-width:360px;
+  margin:20px auto;
+  background:#ece5dd;
+  padding:15px;
+  border-radius:15px;
+}
+.msg{
+  padding:10px 15px;
+  border-radius:15px;
+  margin:8px 0;
+  max-width:80%;
+  font-size:14px;
+}
+.left{background:#fff;color:#000}
+.right{background:#dcf8c6;color:#000;margin-left:auto}
+
+/* BLESSING */
+.bless{font-size:70px;animation:bless 2s infinite}
+@keyframes bless{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.2)}
+  100%{transform:scale(1)}
+}
+
+/* RING */
+.ring{font-size:80px;animation:ring 1.5s infinite}
+@keyframes ring{
+  0%{transform:rotate(0)}
+  50%{transform:rotate(15deg)}
+  100%{transform:rotate(0)}
+}
+
+/* FINAL */
+.heartbeat{animation:beat 1.2s infinite}
+@keyframes beat{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.15)}
+  100%{transform:scale(1)}
+}
+
+/* CRACKERS */
+.fire{
+  position:fixed;
+  top:50%;
+  left:50%;
+  font-size:30px;
+  animation:boom 1.5s infinite;
+}
+@keyframes boom{
+  0%{transform:scale(0);opacity:1}
+  100%{transform:scale(3);opacity:0}
+}
+</style>
+</head>
+
+<body>
+
+<!-- YOUTUBE MUSIC -->
+<iframe id="yt"
+src="https://www.youtube.com/embed/hCOcqD9zX3o?enablejsapi=1&autoplay=1&mute=1&loop=1&playlist=hCOcqD9zX3o"
+style="display:none"></iframe>
+
+<!-- LOCK -->
+<div id="lock">
+  <div class="heart" onclick="unlock()">❤️</div>
+  <p>Touch my heart Shriti…</p>
+</div>
+
+<!-- PAGE 1 -->
+<section id="page1">
+<h1>My Feelings 💖</h1>
+<p>
+Shriti…<br><br>
+Tum wo dua ho jo bina maange qabool ho gayi.  
+Tum wo khushi ho jo har dard ke baad mili.  
+Aaj jo bhi hoon, tumhari wajah se hoon.
+</p>
+<button onclick="nextPage()">Next ➜</button>
+</section>
+
+<!-- PAGE 2 -->
+<section id="page2">
+<h1>Our Chat 💬</h1>
+<div class="chat">
+  <div class="msg left">Tumhe darr lagta hai?</div>
+  <div class="msg right">Jab tum saath ho… nahi ❤️</div>
+  <div class="msg left">Kabhi chhod ke jaoge?</div>
+  <div class="msg right">Kabhi nahi 💞</div>
+</div>
+<button onclick="nextPage()">Next ➜</button>
+</section>
+
+<!-- PAGE 3 -->
+<section id="page3">
+<h1>Love Truth 🧩</h1>
+<p style="text-align:center">Harsh ke liye sabse zaroori kya hai?</p>
+<div style="text-align:center">
+<button onclick="solve()">Shriti ❤️</button>
+</div>
+</section>
+
+<!-- PAGE 4 -->
+<section id="page4">
+<h1>Blessing From My Heart 🤍</h1>
+<p style="text-align:center">
+Main dua karta hoon…<br>
+Tum hamesha muskurati raho,<br>
+Tumhara har aansu mujh tak aaye,<br>
+Aur meri har khushi tumse shuru ho.
+</p>
+<div class="bless" style="text-align:center">🤍</div>
+<button onclick="nextPage()">Next ➜</button>
+</section>
+
+<!-- PAGE 5 -->
+<section id="page5">
+<h1>Trust Game 🎮</h1>
+<p style="text-align:center">
+Agar main gir jaun…<br>
+kya tum mera haath pakdogi?
+</p>
+<div style="text-align:center">
+<button onclick="nextPage()">Hamesha 🤍</button>
+</div>
+</section>
+
+<!-- PAGE 6 -->
+<section id="page6">
+<h1>Just One Question 💍</h1>
+<div class="ring" style="text-align:center">💍</div>
+<p style="text-align:center">Kya tum meri zindagi banogi?</p>
+<button onclick="nextPage()">YES ❤️</button>
+</section>
+
+<!-- PAGE 7 -->
+<section id="page7">
+<h1 class="heartbeat">Forever Us 🌹</h1>
+<p style="text-align:center">
+Ye sirf proposal nahi…<br>
+Ye mera wada hai…<br><br>
+Tum meri ho, aur main hamesha tumhara ❤️
+</p>
+<button onclick="nextPage()">Final Surprise 🎉</button>
+</section>
+
+<!-- PAGE 8 NEW -->
+<section id="page8">
+<h1>Happy Proposal Day 💍❤️</h1>
+<p style="text-align:center">
+Is Proposal Day par main bas itna kehna chahta hoon…<br><br>
+Mera pyaar shabd nahi,  
+meri poori zindagi hai tumhare liye 💖<br><br>
+Happy Proposal Day Shriti 🌹
+</p>
+</section>
+
+<script>
+let current=1;
+function unlock(){
+  lock.style.display="none";
+  page1.classList.add("active");
+  document.getElementById("yt").src+="&mute=0";
+}
+function nextPage(){
+  document.getElementById("page"+current).classList.remove("active");
+  current++;
+  document.getElementById("page"+current).classList.add("active");
+  if(current==8){crackers()}
+}
+function solve(){
+  alert("Correct ❤️");
+  nextPage();
+}
+
+/* ROSES */
+for(let i=0;i<35;i++){
+  let r=document.createElement("div");
+  r.innerHTML="🌹";
+  r.className="rose";
+  r.style.left=Math.random()*100+"%";
+  r.style.animationDelay=Math.random()*8+"s";
+  document.body.appendChild(r);
+}
+
+/* CRACKERS */
+function crackers(){
+  for(let i=0;i<20;i++){
+    let f=document.createElement("div");
+    f.className="fire";
+    f.innerHTML="🎆";
+    f.style.left=Math.random()*100+"%";
+    f.style.top=Math.random()*100+"%";
+    document.body.appendChild(f);
+    setTimeout(()=>f.remove(),1500);
+  }
+}
+</script>
+
+</body>
+</html>
